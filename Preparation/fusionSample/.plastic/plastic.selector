@@ -1,0 +1,4 @@
+repository "fusionSample@ssl://god_of_gamblers@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
