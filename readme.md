@@ -1,4 +1,4 @@
-#VR-edu
+# VR-edu
 ## Introduction
 This is the coursework for VR/AR/MR design class. We aim to design a education system in VR scenario. With our project, educational work can be performed immersively and with high efficiency.
 ## Expected Functionality
