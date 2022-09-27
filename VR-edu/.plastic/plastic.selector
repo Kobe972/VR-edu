@@ -1,0 +1,4 @@
+repository "VRmeet-FUSION@ssl://sunonsun@cloud.cn"
+  path "/"
+    smartbranch "/main/Debug"  
+     

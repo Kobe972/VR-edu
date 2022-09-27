@@ -1,0 +1,42 @@
+[2022-09-23 00:32:29.991] [qiyu_logger] [info] QVR_Start_PC
+[2022-09-23 00:32:34.858] [qiyu_logger] [info] QVR_OnDestroy_PC
+[2022-09-23 00:32:34.938] [qiyu_logger] [info] QVR_OnDestroy_PC OK
+[2022-09-23 00:33:12.902] [qiyu_logger] [info] QVR_Start_PC
+[2022-09-23 00:33:17.803] [qiyu_logger] [info] QVR_OnDestroy_PC
+[2022-09-23 00:33:17.854] [qiyu_logger] [info] QVR_OnDestroy_PC OK
+[2022-09-23 00:33:26.995] [qiyu_logger] [info] QVR_Start_PC
+[2022-09-23 00:33:30.917] [qiyu_logger] [info] QVR_OnDestroy_PC
+[2022-09-23 00:33:30.967] [qiyu_logger] [info] QVR_OnDestroy_PC OK
+[2022-09-27 18:02:49.308] [qiyu_logger] [info] QVR_Start_PC
+[2022-09-27 18:02:53.182] [qiyu_logger] [info] QVR_OnDestroy_PC
+[2022-09-27 18:02:53.233] [qiyu_logger] [info] QVR_OnDestroy_PC OK
+[2022-09-27 18:02:59.119] [qiyu_logger] [info] QVR_Start_PC
+[2022-09-27 18:03:24.784] [qiyu_logger] [info] QVR_OnDestroy_PC
+[2022-09-27 18:03:24.834] [qiyu_logger] [info] QVR_OnDestroy_PC OK
+[2022-09-27 18:04:07.275] [qiyu_logger] [info] QVR_Start_PC
+[2022-09-27 18:04:29.303] [qiyu_logger] [info] QVR_OnDestroy_PC
+[2022-09-27 18:04:29.354] [qiyu_logger] [info] QVR_OnDestroy_PC OK
+[2022-09-27 18:04:48.636] [qiyu_logger] [info] QVR_Start_PC
+[2022-09-27 18:04:56.992] [qiyu_logger] [info] QVR_OnDestroy_PC
+[2022-09-27 18:04:57.043] [qiyu_logger] [info] QVR_OnDestroy_PC OK
+[2022-09-27 18:15:59.112] [qiyu_logger] [info] QVR_Start_PC
+[2022-09-27 18:16:12.070] [qiyu_logger] [info] QVR_OnDestroy_PC
+[2022-09-27 18:16:12.121] [qiyu_logger] [info] QVR_OnDestroy_PC OK
+[2022-09-27 18:16:42.767] [qiyu_logger] [info] QVR_Start_PC
+[2022-09-27 18:16:49.755] [qiyu_logger] [info] QVR_OnDestroy_PC
+[2022-09-27 18:16:49.806] [qiyu_logger] [info] QVR_OnDestroy_PC OK
+[2022-09-27 18:17:18.596] [qiyu_logger] [info] QVR_Start_PC
+[2022-09-27 18:17:29.435] [qiyu_logger] [info] QVR_OnDestroy_PC
+[2022-09-27 18:17:29.485] [qiyu_logger] [info] QVR_OnDestroy_PC OK
+[2022-09-27 18:22:56.605] [qiyu_logger] [info] QVR_Start_PC
+[2022-09-27 18:23:03.943] [qiyu_logger] [info] QVR_OnDestroy_PC
+[2022-09-27 18:23:03.993] [qiyu_logger] [info] QVR_OnDestroy_PC OK
+[2022-09-27 18:23:35.002] [qiyu_logger] [info] QVR_Start_PC
+[2022-09-27 18:23:46.885] [qiyu_logger] [info] QVR_OnDestroy_PC
+[2022-09-27 18:23:46.935] [qiyu_logger] [info] QVR_OnDestroy_PC OK
+[2022-09-27 18:24:25.421] [qiyu_logger] [info] QVR_Start_PC
+[2022-09-27 18:24:35.371] [qiyu_logger] [info] QVR_OnDestroy_PC
+[2022-09-27 18:24:35.422] [qiyu_logger] [info] QVR_OnDestroy_PC OK
+[2022-09-27 19:21:15.538] [qiyu_logger] [info] QVR_Start_PC
+[2022-09-27 19:21:24.549] [qiyu_logger] [info] QVR_OnDestroy_PC
+[2022-09-27 19:21:24.599] [qiyu_logger] [info] QVR_OnDestroy_PC OK
