@@ -3,7 +3,7 @@
 This is the coursework for VR/AR/MR design class. We aim to design a education system in VR scenario. With our project, educational work can be performed immersively and with high efficiency.
 ## Directory
 * Preparation: prepatation works
-* VR-edu: out main project. Download large assets in release page and put them under the following positions:
+* VR-edu: our main project. Download large assets in release page and put them under the following positions:
     * Put Model/ at VR-edu/Assets/
     * Put AgoraRtcKit at VR-edu/Assets/AgoraEngine/Plugins/iOS/AgoraRtcKit.framework/
 ## Expected Functionality
