@@ -32,7 +32,7 @@ Transform:
   - {fileID: 2533699073530762696}
   - {fileID: 2243431031341890091}
   m_Father: {fileID: 4866581619466298784}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1880359040887105820
 GameObject:
@@ -389,7 +389,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1212234023767443612}
   - {fileID: 3130979402341350079}
   - {fileID: 6454313603176070807}
   - {fileID: 1687988394306064454}
@@ -408,12 +407,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7448815bd5148434682b3d931066cd10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RigBaseGameObject: {fileID: 4866581619466298867}
+  m_Camera: {fileID: 0}
+  m_OriginBaseGameObject: {fileID: 4866581619466298867}
   m_CameraFloorOffsetObject: {fileID: 4866581619466298871}
-  m_CameraGameObject: {fileID: 0}
-  m_TrackingOriginMode: 2
-  m_TrackingSpace: 3
+  m_RequestedTrackingOriginMode: 0
   m_CameraYOffset: 1.36144
+  m_CameraGameObject: {fileID: 0}
 --- !u!114 &1308211080314037243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,7 +643,8 @@ MonoBehaviour:
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
   m_ModelPrefab: {fileID: 0}
-  m_ModelTransform: {fileID: 0}
+  m_ModelParent: {fileID: 0}
+  m_Model: {fileID: 0}
   m_AnimateModel: 0
   m_ModelSelectTransition: 
   m_ModelDeSelectTransition: 
@@ -674,7 +674,10 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 4294967295
   m_AttachTransform: {fileID: 0}
+  m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_HoverEntered:
     m_PersistentCalls:
@@ -702,6 +705,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectActionTrigger: 0
   m_HideControllerOnSelect: 0
+  m_AllowHoveredActivate: 0
   m_PlayAudioClipOnSelectEntered: 0
   m_AudioClipForOnSelectEntered: {fileID: 0}
   m_PlayAudioClipOnSelectExited: 0
@@ -735,6 +739,7 @@ MonoBehaviour:
   m_LineType: 0
   m_BlendVisualLinePoints: 1
   m_MaxRaycastDistance: 1000
+  m_RayOriginTransform: {fileID: 0}
   m_ReferenceFrame: {fileID: 0}
   m_Velocity: 16
   m_Acceleration: 9.8
@@ -752,7 +757,6 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
   m_HitClosestOnly: 0
-  m_KeepSelectedTargetValid: 1
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
   m_EnableUIInteraction: 1
@@ -1020,7 +1024,8 @@ MonoBehaviour:
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
   m_ModelPrefab: {fileID: 0}
-  m_ModelTransform: {fileID: 0}
+  m_ModelParent: {fileID: 0}
+  m_Model: {fileID: 0}
   m_AnimateModel: 0
   m_ModelSelectTransition: 
   m_ModelDeSelectTransition: 
@@ -1050,7 +1055,10 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 4294967295
   m_AttachTransform: {fileID: 0}
+  m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_HoverEntered:
     m_PersistentCalls:
@@ -1078,6 +1086,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectActionTrigger: 0
   m_HideControllerOnSelect: 0
+  m_AllowHoveredActivate: 0
   m_PlayAudioClipOnSelectEntered: 0
   m_AudioClipForOnSelectEntered: {fileID: 0}
   m_PlayAudioClipOnSelectExited: 0
@@ -1111,6 +1120,7 @@ MonoBehaviour:
   m_LineType: 0
   m_BlendVisualLinePoints: 1
   m_MaxRaycastDistance: 1000
+  m_RayOriginTransform: {fileID: 0}
   m_ReferenceFrame: {fileID: 0}
   m_Velocity: 16
   m_Acceleration: 9.8
@@ -1128,7 +1138,6 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
   m_HitClosestOnly: 0
-  m_KeepSelectedTargetValid: 1
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
   m_EnableUIInteraction: 1
@@ -1779,7 +1788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1875884987220859046, guid: be17bcb61d3235346b785bd324b84ef6, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1875884987220859046, guid: be17bcb61d3235346b785bd324b84ef6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1892,7 +1901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: b5c49eda388199d4a9aa03de39040101, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: b5c49eda388199d4a9aa03de39040101, type: 3}
       propertyPath: m_LocalScale.x
@@ -1980,67 +1989,4 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 400010, guid: b5c49eda388199d4a9aa03de39040101, type: 3}
   m_PrefabInstance: {fileID: 6454313603175670813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &7209273974485601424
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 4866581619466298784}
-    m_Modifications:
-    - target: {fileID: 8421383959562404876, guid: 186fb32403506e841a1e114e551a1587, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8421383959562404876, guid: 186fb32403506e841a1e114e551a1587, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 32.407494
-      objectReference: {fileID: 0}
-    - target: {fileID: 8421383959562404876, guid: 186fb32403506e841a1e114e551a1587, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 11.661783
-      objectReference: {fileID: 0}
-    - target: {fileID: 8421383959562404876, guid: 186fb32403506e841a1e114e551a1587, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.493767
-      objectReference: {fileID: 0}
-    - target: {fileID: 8421383959562404876, guid: 186fb32403506e841a1e114e551a1587, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8421383959562404876, guid: 186fb32403506e841a1e114e551a1587, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8421383959562404876, guid: 186fb32403506e841a1e114e551a1587, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8421383959562404876, guid: 186fb32403506e841a1e114e551a1587, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8421383959562404876, guid: 186fb32403506e841a1e114e551a1587, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8421383959562404876, guid: 186fb32403506e841a1e114e551a1587, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8421383959562404876, guid: 186fb32403506e841a1e114e551a1587, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8421383959562404878, guid: 186fb32403506e841a1e114e551a1587, type: 3}
-      propertyPath: m_Name
-      value: UIController
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8421383959562404879, guid: 186fb32403506e841a1e114e551a1587, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: 186fb32403506e841a1e114e551a1587, type: 3}
---- !u!4 &1212234023767443612 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8421383959562404876, guid: 186fb32403506e841a1e114e551a1587, type: 3}
-  m_PrefabInstance: {fileID: 7209273974485601424}
   m_PrefabAsset: {fileID: 0}

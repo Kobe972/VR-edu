@@ -73,8 +73,8 @@ public class DCF_DemoScene_ManagerScript_CSharp : MonoBehaviour {
             // loadingParent.gameObject.SetActive(false);
             // loggedInParent.gameObject.SetActive(true);
             // LoggedIn_DisplayUsernameText.text = "Logged In As: " + playerUsername;
-            UserInfo.userName=playerUsername;
-            UserInfo.userPassword=playerPassword;
+            //UserInfo.userName=playerUsername;
+            //UserInfo.userPassword=playerPassword;
             SceneManager.LoadScene(1);
         } else
         {

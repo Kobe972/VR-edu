@@ -10,17 +10,17 @@ using UnityEngine.XR;
 public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
 {
     [SerializeField]
-    private NetworkRunner networkRunner=null;
+    private NetworkRunner networkRunner;
     [SerializeField]
     private NetworkPrefabRef playerPrefab;
-    [SerializeField]
-    private Transform spawnPosition;
     private Dictionary<PlayerRef,NetworkObject> playerList= new Dictionary<PlayerRef,NetworkObject>();
-    public GameObject leftController_obj;
-    public GameObject rightController_obj;
+    public GameObject XROrigin;
     public XRController leftController;
-    public XRController rightController;
+    public Transform leftControllerTransform;
+    public Transform rightControllerTransform;
+    public Transform headTransform;
     private void Start() {
+        networkRunner= gameObject.AddComponent<NetworkRunner>();
         StartGame(GameMode.AutoHostOrClient);
     }
     // private void Update() {
@@ -49,11 +49,40 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
     Scene = SceneManager.GetActiveScene().buildIndex,
     SceneManager = gameObject.AddComponent<NetworkSceneManagerDefault>()
   });}
+  public GameObject FindGameObjectByName(Transform target, string name)
+  {
+      Transform trans = target.Find(name);
+      if (trans != null)
+      {
+          return trans.gameObject;
+      }
+      for (int i = 0; i < target.childCount; i++)
+      {
+          GameObject obj = FindGameObjectByName(target.GetChild(i), name);//调用方法名进行递归 
+          if (obj != null)
+          {
+              return obj.gameObject;
+          }
+      }
+      return null;//如果不存在返回空
+  }
   public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)    
   {
-    NetworkObject networkPlayerObject=runner.Spawn(playerPrefab,spawnPosition.position,spawnPosition.rotation,player);
-
-    playerList.Add(player,networkPlayerObject);
+        if (runner.IsServer)
+        {
+            // Create a unique position for the player
+            Vector3 spawnPosition = new Vector3((player.RawEncoded % runner.Config.Simulation.DefaultPlayers) * 3, 1, 0);
+            NetworkObject networkPlayerObject = runner.Spawn(playerPrefab, spawnPosition, Quaternion.identity, player);
+            // Keep track of the player avatars so we can remove it when they disconnect
+            playerList.Add(player, networkPlayerObject);
+            XROrigin.AddComponent<CameraMove>();
+            XROrigin.GetComponent<CameraMove>().LeftEye = FindGameObjectByName(networkPlayerObject.transform,"LeftEye").transform;
+            XROrigin.GetComponent<CameraMove>().RightEye = FindGameObjectByName(networkPlayerObject.transform,"RightEye").transform;
+            XROrigin.GetComponent<CameraMove>().LeftToe_End = FindGameObjectByName(networkPlayerObject.transform,"LeftToe_End").transform;
+            XROrigin.GetComponent<CameraMove>().RightToe_End = FindGameObjectByName(networkPlayerObject.transform,"RightToe_End").transform;
+            XROrigin.GetComponent<CameraMove>().leftController = leftController;
+            GameObject.Find("Avatar-Yizhang").GetComponent<AvatarAnimationController>().leftController = leftController;
+        }
     }
   public void OnPlayerLeft(NetworkRunner runner, PlayerRef player)    
   {
@@ -75,24 +104,17 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
   public void OnReliableDataReceived(NetworkRunner runner, PlayerRef player, ArraySegment<byte> data) { }
   public void OnSceneLoadDone(NetworkRunner runner) { }
   public void OnSceneLoadStart(NetworkRunner runner) { }
-   public void OnInput(NetworkRunner runner,NetworkInput input){}
-  // {     
-  //       var data = new NetworkInputData();
-  //       var position = transform.position;
-  //       if(leftController!=null)
-  //       {
-  //       Vector2 result;
-  //       var success_l = leftController.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out result);
-  //       if(result[0]>0.4)
-  //       data.movementInput+=Vector3.forward;
-  //       if(result[0]<-0.4)
-  //       data.movementInput+=Vector3.back;
-  //       if(result[1]>0.4)
-  //       data.movementInput+=Vector3.right;
-  //       if(result[1]<-0.4)
-  //       data.movementInput+=Vector3.left;
-  //       }
-  //   input.Set(data);
-  // }
+  public void OnInput(NetworkRunner runner,NetworkInput input)
+  {
+        var data = new NetworkInputData();
+        data.mainCameraPosition = headTransform.position;
+        data.mainCameraRotate = headTransform.rotation;
+        data.leftControllerPosition = leftControllerTransform.position;
+        data.leftControllerRotate = leftControllerTransform.rotation;
+        data.rightControllerPosition = rightControllerTransform.position;
+        data.rightControllerRotate = rightControllerTransform.rotation;
+        leftController.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out data.primaryAxisLeft);
+        input.Set(data);
+  }
   public void OnHostMigration(NetworkRunner runner,HostMigrationToken hostMigrationToken){}
 }
