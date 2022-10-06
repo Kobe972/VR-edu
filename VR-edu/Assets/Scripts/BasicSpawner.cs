@@ -19,22 +19,11 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
     public Transform leftControllerTransform;
     public Transform rightControllerTransform;
     public Transform headTransform;
+    private float DebugIncr=0;
     private void Start() {
         networkRunner= gameObject.AddComponent<NetworkRunner>();
         StartGame(GameMode.AutoHostOrClient);
     }
-    // private void Update() {
-    //   if(leftController_obj==null)
-    //   {
-    //   leftController_obj= GameObject.Find("LeftHand Controller");
-    //   leftController=leftController_obj.GetComponent<XRController>();
-    //   }
-    //   if(rightController_obj==null)
-    //   {
-    //   rightController_obj= GameObject.Find("LeftHand Controller");
-    //   rightController=leftController_obj.GetComponent<XRController>();
-    //   }
-    // }
     async void StartGame(GameMode mode)
 {
   // Create the Fusion runner and let it know that we will be providing user input
@@ -75,13 +64,11 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
             NetworkObject networkPlayerObject = runner.Spawn(playerPrefab, spawnPosition, Quaternion.identity, player);
             // Keep track of the player avatars so we can remove it when they disconnect
             playerList.Add(player, networkPlayerObject);
-            XROrigin.AddComponent<CameraMove>();
-            XROrigin.GetComponent<CameraMove>().LeftEye = FindGameObjectByName(networkPlayerObject.transform,"LeftEye").transform;
-            XROrigin.GetComponent<CameraMove>().RightEye = FindGameObjectByName(networkPlayerObject.transform,"RightEye").transform;
-            XROrigin.GetComponent<CameraMove>().LeftToe_End = FindGameObjectByName(networkPlayerObject.transform,"LeftToe_End").transform;
-            XROrigin.GetComponent<CameraMove>().RightToe_End = FindGameObjectByName(networkPlayerObject.transform,"RightToe_End").transform;
-            XROrigin.GetComponent<CameraMove>().leftController = leftController;
-            GameObject.Find("Avatar-Yizhang").GetComponent<AvatarAnimationController>().leftController = leftController;
+            if(networkPlayerObject.IsValid)
+            {
+                networkPlayerObject.GetComponent<NameLayer>().nameLayer("Ignore");
+            }
+            
         }
     }
   public void OnPlayerLeft(NetworkRunner runner, PlayerRef player)    

@@ -5,7 +5,6 @@ This is the coursework for VR/AR/MR design class. We aim to design a education s
 * Preparation: prepatation works
 * VR-edu: our main project. Download large assets in release page and put them under the following positions:
     * Put Model/ at VR-edu/Assets/
-    * Put AgoraRtcKit at VR-edu/Assets/AgoraEngine/Plugins/iOS/AgoraRtcKit.framework/
 ## Expected Functionality
 * The professor can teach its students using screen share, especially powerpoint in the scenario.
 * People can draw lines in the space to facilitate their comprehension and analysis.

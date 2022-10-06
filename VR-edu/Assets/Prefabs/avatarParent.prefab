@@ -316,7 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3858484027078281235}
   - component: {fileID: 3858484027078281234}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wolf3D.Avatar_Renderer_EyeRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -715,6 +715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3858484027254267744}
+  - component: {fileID: 6555250000668678800}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -737,6 +738,52 @@ Transform:
   m_Father: {fileID: 3858484026926603565}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6555250000668678800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858484027254267745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1101589486, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  _interpolationTarget: {fileID: 3858484027254267744}
+  DetachInterpTarget: 0
+  SyncParent: 1
+  InterpolateErrorCorrection: 1
+  InterpolatedErrorCorrectionSettings:
+    MinRate: 3.3
+    MaxRate: 10
+    PosBlendStart: 0.25
+    PosBlendEnd: 1
+    PosMinCorrection: 0.025
+    PosTeleportDistance: 2
+    RotBlendStart: 0.1
+    RotBlendEnd: 0.5
+    RotTeleportRadians: 1.5
+  SyncScale: 0
+  Space: 1
+  _collider: {fileID: 0}
+  Config:
+    AllowedPenetration: 0.1
+    PenetrationCorrection: 0.5
+    BumpBehavior: 1
+    LayerMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    TriggerInteraction: 0
+    AirControl: 0
+    Acceleration: 10
+    Braking: 10
+    BaseJumpImpulse: 5
+    MaxSpeed: 4
+    MaxSlope: 60
+    MaxSlopeSpeed: 5
+    _gravity: {x: 0, y: -9.81, z: 0}
 --- !u!1 &3858484027276801519
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,7 +922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3858484027451199904}
   - component: {fileID: 3858484027451199919}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wolf3D.Avatar_Renderer_EyeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1122,7 +1169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3858484027536205979}
   - component: {fileID: 3858484027536205978}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wolf3D.Avatar_Renderer_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1910,6 +1957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3858484027867343770}
   - component: {fileID: 3858484027867343769}
+  - component: {fileID: 8904485525155944073}
   m_Layer: 0
   m_Name: IKHead
   m_TagString: Untagged
@@ -1983,6 +2031,52 @@ MonoBehaviour:
       z: 1
     m_MaintainPositionOffset: 0
     m_MaintainRotationOffset: 0
+--- !u!114 &8904485525155944073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858484027867343771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1101589486, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  _interpolationTarget: {fileID: 3858484027867343770}
+  DetachInterpTarget: 0
+  SyncParent: 1
+  InterpolateErrorCorrection: 1
+  InterpolatedErrorCorrectionSettings:
+    MinRate: 3.3
+    MaxRate: 10
+    PosBlendStart: 0.25
+    PosBlendEnd: 1
+    PosMinCorrection: 0.025
+    PosTeleportDistance: 2
+    RotBlendStart: 0.1
+    RotBlendEnd: 0.5
+    RotTeleportRadians: 1.5
+  SyncScale: 0
+  Space: 1
+  _collider: {fileID: 0}
+  Config:
+    AllowedPenetration: 0.1
+    PenetrationCorrection: 0.5
+    BumpBehavior: 1
+    LayerMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    TriggerInteraction: 0
+    AirControl: 0
+    Acceleration: 10
+    Braking: 10
+    BaseJumpImpulse: 5
+    MaxSpeed: 4
+    MaxSlope: 60
+    MaxSlopeSpeed: 5
+    _gravity: {x: 0, y: -9.81, z: 0}
 --- !u!1 &3858484027881367615
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,7 +2343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3858484028039610844}
   - component: {fileID: 3858484028039610843}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wolf3D.Avatar_Renderer_Headwear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2468,7 +2562,7 @@ GameObject:
   - component: {fileID: 3858484028143028575}
   - component: {fileID: 3858484028143028560}
   - component: {fileID: 3858484028143028561}
-  - component: {fileID: 3858484028143028562}
+  - component: {fileID: 1800671952313765883}
   m_Layer: 0
   m_Name: Avatar-Yizhang
   m_TagString: Untagged
@@ -2655,6 +2749,7 @@ MonoBehaviour:
   turnSmoothness: 0
   IKHead: {fileID: 3858484027867343770}
   headBodyOffset: {x: 0, y: -1.65, z: 0}
+  animator: {fileID: 3858484028143028573}
 --- !u!114 &3858484028143028561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2676,7 +2771,7 @@ MonoBehaviour:
   footOffset: {x: 0, y: 0.13, z: 0}
   raycastOffsetLeft: {x: 0, y: 0.5, z: 0}
   raycastOffsetRight: {x: 0, y: 0.5, z: 0}
---- !u!114 &3858484028143028562
+--- !u!114 &1800671952313765883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2685,12 +2780,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 3858484028143028564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76b038e8a0b20384fa4f3c5243062e13, type: 3}
+  m_Script: {fileID: -1101589486, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  animator: {fileID: 3858484028143028573}
-  leftController: {fileID: 0}
+  _interpolationTarget: {fileID: 3858484028143028563}
+  DetachInterpTarget: 0
+  SyncParent: 1
+  InterpolateErrorCorrection: 1
+  InterpolatedErrorCorrectionSettings:
+    MinRate: 3.3
+    MaxRate: 10
+    PosBlendStart: 0.25
+    PosBlendEnd: 1
+    PosMinCorrection: 0.025
+    PosTeleportDistance: 2
+    RotBlendStart: 0.1
+    RotBlendEnd: 0.5
+    RotTeleportRadians: 1.5
+  SyncScale: 0
+  Space: 0
+  _collider: {fileID: 0}
+  Config:
+    AllowedPenetration: 0.1
+    PenetrationCorrection: 0.5
+    BumpBehavior: 1
+    LayerMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    TriggerInteraction: 0
+    AirControl: 0
+    Acceleration: 10
+    Braking: 10
+    BaseJumpImpulse: 5
+    MaxSpeed: 4
+    MaxSlope: 60
+    MaxSlopeSpeed: 5
+    _gravity: {x: 0, y: -9.81, z: 0}
 --- !u!1 &3858484028151116811
 GameObject:
   m_ObjectHideFlags: 0
@@ -2861,7 +2987,8 @@ GameObject:
   - component: {fileID: 3858484028269786529}
   - component: {fileID: 3858484028269786530}
   - component: {fileID: 5470189721234259881}
-  - component: {fileID: 8134298095968115932}
+  - component: {fileID: 5936529553867236939}
+  - component: {fileID: 206839181039864662}
   m_Layer: 0
   m_Name: avatarParent
   m_TagString: Untagged
@@ -2908,10 +3035,13 @@ MonoBehaviour:
     RawGuidValue: 1e75cd39d76739447aba98de539be1ec
   NestedObjects: []
   NetworkedBehaviours:
-  - {fileID: 8134298095968115932}
+  - {fileID: 5936529553867236939}
   - {fileID: 3858484028143028560}
   - {fileID: 3858484028143028561}
-  - {fileID: 3858484028143028562}
+  - {fileID: 1800671952313765883}
+  - {fileID: 6555250000668678800}
+  - {fileID: 1140033193060565214}
+  - {fileID: 8904485525155944073}
   SimulationBehaviours: []
 --- !u!143 &5470189721234259881
 CharacterController:
@@ -2931,7 +3061,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8134298095968115932
+--- !u!114 &5936529553867236939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2940,12 +3070,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3858484028269786531}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Script: {fileID: -1101589486, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 2
-  InterpolationSpace: 0
-  InterpolationTarget: {fileID: 3858484028269786529}
+  _interpolationTarget: {fileID: 3858484028269786529}
+  DetachInterpTarget: 0
+  SyncParent: 1
   InterpolateErrorCorrection: 1
   InterpolatedErrorCorrectionSettings:
     MinRate: 3.3
@@ -2957,6 +3088,43 @@ MonoBehaviour:
     RotBlendStart: 0.1
     RotBlendEnd: 0.5
     RotTeleportRadians: 1.5
+  SyncScale: 0
+  Space: 0
+  _collider: {fileID: 5470189721234259881}
+  Config:
+    AllowedPenetration: 0.1
+    PenetrationCorrection: 0.5
+    BumpBehavior: 1
+    LayerMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    TriggerInteraction: 0
+    AirControl: 0
+    Acceleration: 10
+    Braking: 10
+    BaseJumpImpulse: 5
+    MaxSpeed: 4
+    MaxSlope: 60
+    MaxSlopeSpeed: 5
+    _gravity: {x: 0, y: -9.81, z: 0}
+--- !u!114 &206839181039864662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858484028269786531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 565c0c6791c949448ade30fcc51e9adf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectsToMask:
+  - {fileID: 3858484027451199905}
+  - {fileID: 3858484027078281236}
+  - {fileID: 3858484027536205980}
+  - {fileID: 3858484028445848510}
+  - {fileID: 3858484028039610845}
 --- !u!1 &3858484028358837833
 GameObject:
   m_ObjectHideFlags: 0
@@ -3048,7 +3216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3858484028445848509}
   - component: {fileID: 3858484028445848508}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wolf3D.Avatar_Renderer_Teeth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4078,6 +4246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3858484028777521916}
+  - component: {fileID: 1140033193060565214}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -4100,6 +4269,52 @@ Transform:
   m_Father: {fileID: 3858484026922441076}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1140033193060565214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858484028777521917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1101589486, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  _interpolationTarget: {fileID: 3858484028777521916}
+  DetachInterpTarget: 0
+  SyncParent: 1
+  InterpolateErrorCorrection: 1
+  InterpolatedErrorCorrectionSettings:
+    MinRate: 3.3
+    MaxRate: 10
+    PosBlendStart: 0.25
+    PosBlendEnd: 1
+    PosMinCorrection: 0.025
+    PosTeleportDistance: 2
+    RotBlendStart: 0.1
+    RotBlendEnd: 0.5
+    RotTeleportRadians: 1.5
+  SyncScale: 0
+  Space: 1
+  _collider: {fileID: 0}
+  Config:
+    AllowedPenetration: 0.1
+    PenetrationCorrection: 0.5
+    BumpBehavior: 1
+    LayerMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    TriggerInteraction: 0
+    AirControl: 0
+    Acceleration: 10
+    Braking: 10
+    BaseJumpImpulse: 5
+    MaxSpeed: 4
+    MaxSlope: 60
+    MaxSlopeSpeed: 5
+    _gravity: {x: 0, y: -9.81, z: 0}
 --- !u!1 &3858484028834630284
 GameObject:
   m_ObjectHideFlags: 0

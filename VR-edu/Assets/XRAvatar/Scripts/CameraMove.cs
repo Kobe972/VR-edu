@@ -7,15 +7,12 @@ public class CameraMove : MonoBehaviour
     public XRController leftController;
     public float moveSpeed=3;
     private GameObject mainCamera;
-    public Transform LeftEye;
-    public Transform RightEye;
-    public Transform LeftToe_End;
-    public Transform RightToe_End;
     private float AvatarHeightOffset;
     private void Start()
     {
         mainCamera=GameObject.FindWithTag("MainCamera");
-        AvatarHeightOffset=(LeftEye.position.y+RightEye.position.y)/2-(LeftToe_End.position.y+RightToe_End.position.y)/2;
+        //AvatarHeightOffset=(LeftEye.position.y+RightEye.position.y)/2-(LeftToe_End.position.y+RightToe_End.position.y)/2;
+        AvatarHeightOffset=1.68f;
     }
 
     private void Update()

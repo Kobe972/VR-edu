@@ -8,6 +8,7 @@ public class Player : NetworkBehaviour
   [SerializeField] private PhysxBall _prefabPhysxBall;
 
   [Networked] private TickTimer delay { get; set; }
+  public bool debug;
 
   private NetworkCharacterControllerPrototype _cc;
   private Vector3 _forward;
@@ -60,6 +61,7 @@ public class Player : NetworkBehaviour
   {
     if (GetInput(out NetworkInputData data))
     {
+      if(debug)Debug.Log(data);
       data.direction.Normalize();
       _cc.Move(5*data.direction*Runner.DeltaTime);
 
