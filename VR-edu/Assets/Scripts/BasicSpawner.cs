@@ -64,11 +64,6 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
             NetworkObject networkPlayerObject = runner.Spawn(playerPrefab, spawnPosition, Quaternion.identity, player);
             // Keep track of the player avatars so we can remove it when they disconnect
             playerList.Add(player, networkPlayerObject);
-            if(networkPlayerObject.IsValid)
-            {
-                networkPlayerObject.GetComponent<NameLayer>().nameLayer("Ignore");
-            }
-            
         }
     }
   public void OnPlayerLeft(NetworkRunner runner, PlayerRef player)    
