@@ -3,6 +3,7 @@
 This is the coursework for VR/AR/MR design class. We aim to design a education system in VR scenario. With our project, educational work can be performed immersively and with high efficiency.
 ## Directory
 * Preparation: prepatation works
+* VREduHub: A backend api, used to authenticate and registry.
 * VR-edu: our main project. Download large assets in release page and put them under the following positions:
     * Put Model/ at VR-edu/Assets/
 ## Expected Functionality
