@@ -34,7 +34,7 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
   await networkRunner.StartGame(new StartGameArgs()
   {
     GameMode = mode,
-    SessionName = "Fusion Room",
+    SessionName = GlobalVar.roomname,
     Scene = SceneManager.GetActiveScene().buildIndex,
     SceneManager = gameObject.AddComponent<NetworkSceneManagerDefault>()
   });}
