@@ -6,7 +6,7 @@ public class GlobalVar : MonoBehaviour
 {
     public static string username;
     public static string token;
-    public static string roomname;
+    public static string roomname="123";
     // Start is called before the first frame update
     void Start()
     {
