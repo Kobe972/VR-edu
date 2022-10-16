@@ -2989,6 +2989,8 @@ GameObject:
   - component: {fileID: 5470189721234259881}
   - component: {fileID: 5936529553867236939}
   - component: {fileID: 206839181039864662}
+  - component: {fileID: 1681138468791721905}
+  - component: {fileID: 4778907089911013716}
   m_Layer: 0
   m_Name: avatarParent
   m_TagString: Untagged
@@ -3036,6 +3038,8 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 5936529553867236939}
+  - {fileID: 1681138468791721905}
+  - {fileID: 4778907089911013716}
   - {fileID: 3858484028143028560}
   - {fileID: 3858484028143028561}
   - {fileID: 1800671952313765883}
@@ -3125,6 +3129,40 @@ MonoBehaviour:
   - {fileID: 3858484027536205980}
   - {fileID: 3858484028445848510}
   - {fileID: 3858484028039610845}
+--- !u!114 &1681138468791721905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858484028269786531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08bcdf45fbfd0824d96d998eefb7863a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  NetworkCommunicator: {fileID: 2143065448830271910, guid: 24179acbe8110b244afe9196d272987e, type: 3}
+--- !u!114 &4778907089911013716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858484028269786531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6376dd7fc23b3764483a7349b58502e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  speakerInUse: {fileID: 0}
+  recorderInUse: {fileID: 0}
+  logLevel: 1
+  ignoreGlobalLogLevel: 0
+  AutoCreateRecorderIfNotFound: 0
+  UsePrimaryRecorder: 0
+  SetupDebugSpeaker: 0
 --- !u!1 &3858484028358837833
 GameObject:
   m_ObjectHideFlags: 0

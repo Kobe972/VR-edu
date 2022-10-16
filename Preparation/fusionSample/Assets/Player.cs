@@ -73,6 +73,7 @@ public class Player : NetworkBehaviour
         if ((data.buttons & NetworkInputData.MOUSEBUTTON1) != 0)
         {
           delay = TickTimer.CreateFromSeconds(Runner, 0.5f);
+          Debug.Log(Runner);
           Runner.Spawn(_prefabBall,
             transform.position+_forward,
             Quaternion.LookRotation(_forward),

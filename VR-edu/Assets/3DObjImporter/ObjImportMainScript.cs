@@ -12,8 +12,8 @@ public class ObjImportMainScript : MonoBehaviour
     public GameObject InputPanel;
     //public GameObject ControlPanel;
     public GameObject ObjImporterInst;
-    //private GameObject Legend; //Í¼Àý
-    //public Transform LegendBox; //°üº¬Í¼ÀýµÄ¡°ºÐ×Ó¡±
+    //private GameObject Legend; //Í¼ï¿½ï¿½
+    //public Transform LegendBox; //ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½Ó¡ï¿½
     private string dir;
     //public TMP_Text Name;
     //public TMP_Text Visibility;
@@ -32,7 +32,10 @@ public class ObjImportMainScript : MonoBehaviour
     public void Load()
     {
         dir = inputedPath.text;
-        GlobalVar.communicator.GetComponent<RPCCalls>().RPC_LoadThreeDModel(dir);
+        var mainCamera = GameObject.FindWithTag("MainCamera");
+        Vector3 position = mainCamera.transform.position + mainCamera.transform.TransformVector(Vector3.forward) * 1f;
+        position=new Vector3(position.x,mainCamera.transform.position.y-0.5f,position.z);
+        GlobalVar.communicator.GetComponent<RPCCalls>().RPC_LoadThreeDModel(dir,position);
         InputPanel.SetActive(false);
     }
 

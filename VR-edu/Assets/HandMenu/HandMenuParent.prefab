@@ -329,7 +329,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5149563513576732134}
-  - component: {fileID: 5149563513576732133}
+  - component: {fileID: 4729705097366639403}
+  - component: {fileID: 9112982191868617066}
   m_Layer: 0
   m_Name: HandMenuParent
   m_TagString: Untagged
@@ -353,7 +354,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5149563513576732133
+--- !u!114 &4729705097366639403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -362,12 +363,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 5149563513576732135}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6abf3be9e1cb1994b93b004837f1a8a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d14281528229164c86282eb8b212e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   leftController: {fileID: 0}
   rightController: {fileID: 0}
   HandMenu: {fileID: 5149563511853570853}
+--- !u!114 &9112982191868617066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5149563513576732135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b004714fbd97a4c4fa85a489f0d7b3cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjImporterPrefab: {fileID: 0}
+  Keyboard: {fileID: 0}
 --- !u!1 &5149563513986329493
 GameObject:
   m_ObjectHideFlags: 0

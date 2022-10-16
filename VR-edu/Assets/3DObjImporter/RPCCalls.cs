@@ -18,10 +18,10 @@ public class RPCCalls : NetworkBehaviour
         
     }
     [Rpc(RpcSources.InputAuthority, RpcTargets.All)]
-    public void RPC_LoadThreeDModel(string dir, RpcInfo info = default)
+    public void RPC_LoadThreeDModel(string dir, Vector3 position, RpcInfo info = default)
     {
         var gameobject=Instantiate(importedObj);
         gameobject.GetComponent<LoadObject>().Load(dir);
-
+        gameobject.transform.position=position;
     }
 }

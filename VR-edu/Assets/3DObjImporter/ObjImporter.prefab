@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 3240688797262320280}
   - component: {fileID: 3240688797262320281}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -377,7 +377,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3240688797262320280}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3224410207029357142}
+        m_TargetAssemblyTypeName: ObjImportMainScript, Assembly-CSharp
+        m_MethodName: _Destroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3240688797914322395
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +565,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3240688798059212577}
+      - m_Target: {fileID: 3224410207029357142}
         m_TargetAssemblyTypeName: ObjImportMainScript, Assembly-CSharp
         m_MethodName: Load
         m_Mode: 1
@@ -778,9 +790,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3240688798059212582}
-  - component: {fileID: 3240688798059212577}
   - component: {fileID: 3117697367384222789}
-  - component: {fileID: 1351715774286075040}
+  - component: {fileID: 3224410207029357142}
+  - component: {fileID: 2464435997103041600}
   m_Layer: 0
   m_Name: ObjImporter
   m_TagString: Untagged
@@ -804,22 +816,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3240688798059212577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3240688798059212583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7c9035f85ca7e04da05a9ffc019c932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputedPath: {fileID: 3240688798021687962}
-  ImportedObjectsParent: {fileID: 0}
-  InputPanel: {fileID: 3240688798839393502}
-  ObjImporterInst: {fileID: 3240688798059212583}
 --- !u!114 &3117697367384222789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,7 +829,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
---- !u!114 &1351715774286075040
+--- !u!114 &3224410207029357142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3240688798059212583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ae5e478a58139459afc60e2ec50bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputedPath: {fileID: 3240688798021687962}
+  InputPanel: {fileID: 3240688798839393502}
+  ObjImporterInst: {fileID: 3240688798059212583}
+--- !u!114 &2464435997103041600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -21,7 +21,8 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
     public Transform headTransform;
     private float DebugIncr=0;
     private void Start() {
-        networkRunner= gameObject.AddComponent<NetworkRunner>();
+        //networkRunner= gameObject.AddComponent<NetworkRunner>();
+        networkRunner= gameObject.GetComponent<NetworkRunner>();
         StartGame(GameMode.AutoHostOrClient);
     }
     async void StartGame(GameMode mode)

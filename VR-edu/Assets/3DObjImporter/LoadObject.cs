@@ -11,21 +11,19 @@ public class LoadObject : MonoBehaviour
 {
     // Start is called before the first frame update
     private string error = string.Empty;
-    private string FullName;                                                    //´æÂ·¾¶ÏÂ.3DSaaS[0].Fullname
+    private string FullName;                                                    //ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½.3DSaaS[0].Fullname
     private List<xmlParser> xmlParserList;
-    public GameObject ImportedObjectsParent;
     private List<GameObject> parts = new List<GameObject>();
     private List<int> shown = new List<int>();
     private List<string> NameList = new List<string>();
     private FileInfo[] files;
     private int index = new int();
-    private Vector3 InitializedPosition = new Vector3(-0.3f, 1.5f, 0.3f); //To be modified
 
 
 
     void Start()
     {
-        transform.position = InitializedPosition;
+
     }
     public void Load(string dir)
     {
@@ -37,7 +35,7 @@ public class LoadObject : MonoBehaviour
         else
         {
             FullName = GetFiles(dir);
-            xmlParserList = new xmlAnalyze().Load(FullName);//¼ÓÔØxmlÏÂµÄÎÄ¼þÐÅÏ¢
+            xmlParserList = new xmlAnalyze().Load(FullName);//ï¿½ï¿½ï¿½ï¿½xmlï¿½Âµï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Ï¢
             foreach (xmlParser _part in xmlParserList)
             {
                 float r = Convert.ToSingle(_part.color.Split(',')[0]);
@@ -64,7 +62,7 @@ public class LoadObject : MonoBehaviour
     private string GetFiles(string path)
     {
         string DSaaSPath = string.Empty;
-        //»ñÈ¡Ö¸¶¨Â·¾¶ÏÂÃæµÄËùÓÐ×ÊÔ´ÎÄ¼þ  
+        //ï¿½ï¿½È¡Ö¸ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½Ä¼ï¿½  
         if (Directory.Exists(path))
         {
             DirectoryInfo direction = new DirectoryInfo(path);
