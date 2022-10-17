@@ -6,22 +6,29 @@ using Fusion;
 public class RPCCalls : NetworkBehaviour
 {
     public GameObject importedObj;
+    public bool call=false;
+    public Vector3 position;
+    public string dir;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void FixedUpdateNetwork()
     {
-        
+        if(Object.HasInputAuthority&&call)
+        {
+            RPC_LoadThreeDModel(dir,position);
+            call=false;
+        }
     }
     [Rpc(RpcSources.InputAuthority, RpcTargets.All)]
-    public void RPC_LoadThreeDModel(string dir, Vector3 position, RpcInfo info = default)
+    public void RPC_LoadThreeDModel(string _dir, Vector3 _position, RpcInfo info = default)
     {
+        //Debug.Log("called");
         var gameobject=Instantiate(importedObj);
-        gameobject.GetComponent<LoadObject>().Load(dir);
-        gameobject.transform.position=position;
+        gameobject.GetComponent<LoadObject>().Load(_dir);
+        gameobject.transform.position=_position;
     }
 }

@@ -15,5 +15,4 @@ public struct NetworkInputData : INetworkInput
     public Quaternion rightControllerRotate;
 
 
-
 }

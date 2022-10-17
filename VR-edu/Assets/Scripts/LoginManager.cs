@@ -48,7 +48,8 @@ public class LoginManager : MonoBehaviour
         }
         formData.Add(new MultipartFormDataSection("username", LoginUsernameInputField.text));
         formData.Add(new MultipartFormDataSection("password", LoginPasswordInputField.text));
-        UnityWebRequest www = UnityWebRequest.Post("http://114.214.228.26:8080/loginIn", formData);
+        using(UnityWebRequest www = UnityWebRequest.Post("http://114.214.240.48:8080/loginIn", formData))
+        {
         www.downloadHandler = new DownloadHandlerBuffer();
         yield return www.SendWebRequest();
         if (www.result != UnityWebRequest.Result.Success)
@@ -67,7 +68,7 @@ public class LoginManager : MonoBehaviour
         else
         {
             LoginErrorText.SetText("Username or password invalid");
-        }
+        }}
     }
     public void registry()
     {
@@ -93,7 +94,8 @@ public class LoginManager : MonoBehaviour
         List<IMultipartFormSection> formData = new List<IMultipartFormSection>();
         formData.Add(new MultipartFormDataSection("username", RegistryUsernameInputField.text));
         formData.Add(new MultipartFormDataSection("password", RegistryPasswordInputField.text));
-        UnityWebRequest www = UnityWebRequest.Post("http://114.214.228.26:8080/register", formData);
+        using(UnityWebRequest www = UnityWebRequest.Post("http://114.214.240.48:8080/register", formData))
+        {
         www.downloadHandler = new DownloadHandlerBuffer();
         yield return www.SendWebRequest();
         if (www.result != UnityWebRequest.Result.Success)
@@ -112,7 +114,7 @@ public class LoginManager : MonoBehaviour
         else
         {
             RegistryErrorText.SetText("Username already exists");
-        }
+        }}
     }
     public void OpenRegisterPanel()
     {

@@ -3156,8 +3156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  speakerInUse: {fileID: 0}
-  recorderInUse: {fileID: 0}
+  speakerInUse: {fileID: 7114059300393290412, guid: 6d8abcebec9ad0f4babc73130f401d31, type: 3}
+  recorderInUse: {fileID: 7335279433784746513, guid: f2849f61a2be9bf4bb26dc43130929aa, type: 3}
   logLevel: 1
   ignoreGlobalLogLevel: 0
   AutoCreateRecorderIfNotFound: 0
