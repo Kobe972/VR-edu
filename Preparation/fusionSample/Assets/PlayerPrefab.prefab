@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 6823939644681605952}
   - component: {fileID: 6823939644681605983}
   - component: {fileID: -479875095434291059}
+  - component: {fileID: 1638414573932177273}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -185,6 +186,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 6823939644681605983}
   - {fileID: -479875095434291059}
+  - {fileID: 1638414573932177273}
   SimulationBehaviours: []
 --- !u!143 &6823939644681605952
 CharacterController:
@@ -253,3 +255,26 @@ MonoBehaviour:
   _interpolationDataSource: 0
   _prefabBall: {fileID: 2341447945745546916, guid: 78fd79f232b0582458047099c0cab618, type: 3}
   _prefabPhysxBall: {fileID: 7775324243878767132, guid: 2fc649783cbd9d64abc5c0081b9ce5e8, type: 3}
+  debug: 0
+  _spawned:
+    _value: 0
+--- !u!114 &1638414573932177273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6823939644681605982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6376dd7fc23b3764483a7349b58502e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  speakerInUse: {fileID: 0}
+  recorderInUse: {fileID: 0}
+  logLevel: 1
+  ignoreGlobalLogLevel: 0
+  AutoCreateRecorderIfNotFound: 0
+  UsePrimaryRecorder: 1
+  SetupDebugSpeaker: 0
