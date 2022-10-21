@@ -14,13 +14,15 @@ public class CommunicatorSpawner : NetworkBehaviour
     }
     public override void FixedUpdateNetwork()
     {
-        if (!spawned&&Object.HasInputAuthority)
+        if(spawned==false)
         {
             spawned = true;
             var communicator=Runner.Spawn(NetworkCommunicator, new Vector3(0, 0, 0), Quaternion.identity,
-             Object.InputAuthority, (runner, o) =>{});
-            GlobalVar.communicator = communicator;
+            Object.InputAuthority, (runner, o) =>{});
+            if (Object.HasStateAuthority)
+            {
+                GlobalVar.communicator = communicator;
+            }
         }
-        
     }
 }
