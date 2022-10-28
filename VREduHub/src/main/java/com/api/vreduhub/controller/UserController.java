@@ -78,7 +78,6 @@ public class UserController {
             result.put("result","success");
             result.put("username",username);
             result.put("token",token);
-            result.put("result","success");
             userService.Insert(username, password);
         }
         return result;

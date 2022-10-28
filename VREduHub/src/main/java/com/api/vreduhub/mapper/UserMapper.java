@@ -12,5 +12,7 @@ public interface UserMapper {
 
     @Select("SELECT * FROM user WHERE username = #{username} limit 1")
     User retrieveUser(@Param("username") String username);
+
+
 }
 

@@ -35,6 +35,8 @@ public class ObjImportMainScript : MonoBehaviour
         var mainCamera = GameObject.FindWithTag("MainCamera");
         Vector3 position = mainCamera.transform.position + mainCamera.transform.TransformVector(Vector3.forward) * 1f;
         position=new Vector3(position.x,mainCamera.transform.position.y-0.5f,position.z);
+        Debug.Log(GlobalVar.communicator);
+        Debug.Log(GlobalVar.communicator.GetComponent<RPCCalls>());
         GlobalVar.communicator.GetComponent<RPCCalls>().dir=dir;
         GlobalVar.communicator.GetComponent<RPCCalls>().position=position;
         GlobalVar.communicator.GetComponent<RPCCalls>().call=true;

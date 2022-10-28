@@ -19,8 +19,9 @@ public class CommunicatorSpawner : NetworkBehaviour
             spawned = true;
             var communicator=Runner.Spawn(NetworkCommunicator, new Vector3(0, 0, 0), Quaternion.identity,
             Object.InputAuthority, (runner, o) =>{});
-            if (Object.HasStateAuthority)
+            if (Object.HasInputAuthority)
             {
+                Debug.Log(Object.HasInputAuthority);
                 GlobalVar.communicator = communicator;
             }
         }
