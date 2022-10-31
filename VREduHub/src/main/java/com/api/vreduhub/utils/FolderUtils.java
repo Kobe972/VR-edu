@@ -2,6 +2,7 @@ package com.api.vreduhub.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.system.ApplicationHome;
 import org.springframework.util.ResourceUtils;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -10,8 +11,6 @@ import java.io.FileNotFoundException;
 
 @Slf4j
 public class FolderUtils {
-    @Value("${datapath}")
-    private static String datapath;
     public static boolean saveMultiFile(String basePath, MultipartFile[] files) throws Exception{
         if(files==null||files.length==0)
         {
@@ -24,9 +23,10 @@ public class FolderUtils {
         for(MultipartFile file:files)
         {
             String filePath = basePath+File.separator+file.getOriginalFilename();
-
-            //File path=new File(ResourceUtils.getURL("classpath:").getPath());
-            File _fullPath=new File("D:\\programming\\unity\\VR-edu\\VREduHub\\target\\classes", filePath);
+            ApplicationHome home = new ApplicationHome(FolderUtils.class);
+            File jarFile = home.getSource();
+            String path = jarFile.getParentFile().getPath();
+            File _fullPath=new File(path, filePath);
             String fullPath=_fullPath.getAbsolutePath();
             if(File.separator.equals("\\"))
                 fullPath = fullPath.replace('/','\\');
@@ -35,7 +35,6 @@ public class FolderUtils {
             try {
                 boolean success = makeDir(fullPath);
                 if (!success) return false;
-                log.info(fullPath);
                 file.transferTo(_fullPath);
             }
             catch (Exception e)
