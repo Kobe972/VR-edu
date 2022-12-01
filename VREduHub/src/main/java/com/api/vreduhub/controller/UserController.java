@@ -64,6 +64,7 @@ public class UserController {
             result.put("token",token);
             Cookie renew = new Cookie("token", null);
             Cookie cookie = new Cookie("token", token);
+            cookie.setMaxAge(24*60*60);
             response.addCookie(renew);
             response.addCookie(cookie);
         }else {
@@ -106,8 +107,9 @@ public class UserController {
             userService.Insert(username, password);
             Cookie cookie = new Cookie("token", token);
             Cookie renew = new Cookie("token", null);
-            response.addCookie(cookie);
+            cookie.setMaxAge(24*60*60);
             response.addCookie(renew);
+            response.addCookie(cookie);
         }
         return result;
     }
